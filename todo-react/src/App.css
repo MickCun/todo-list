@@ -14,7 +14,9 @@
 .todo-container {
   width: 35%;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
 }
 
 .todo-header {
@@ -58,4 +60,16 @@ ul {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+  transition: 0.15s ease;
+  cursor: pointer;
+}
+
+.add-todo:hover {
+  transform: scale(1.05);
+  transition: 0.15s ease;
+  cursor: pointer;
 }

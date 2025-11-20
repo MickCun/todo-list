@@ -43,7 +43,7 @@ function App() {
           </div>
           <div className="form-input input-group mb-3">
             <input value={task} onChange={(e) => setTask(e.target.value)} type="text" className="form-control" aria-describedby="button-addon2"/>
-            <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={addTodo}>Add Todo</button>
+            <button className="btn add-todo btn-outline-secondary" type="button" id="button-addon2" onClick={addTodo}>Add Todo</button>
           </div>
           <ul className="list">
             { todos.map((t, i) => (
