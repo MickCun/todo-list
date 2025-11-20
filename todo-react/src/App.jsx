@@ -8,17 +8,20 @@ function App() {
   const [task, setTask] = useState('')
 
   const addTodo = () => {
-    const inputBox = document.getElementById("todo");
-    const inputValue = inputBox.value
-    console.log(inputValue)
+    setTodos([...todos, task])
+    setTask("")
   }
 
   return (
     <>
-      <input type="text" id="todo"></input>
-      <button onClick={ addTodo }>Click Me!</button>
-    
+      <input value={task} onChange={(e) => setTask(e.target.value)} />
+      <button onClick={addTodo}>Click Me!</button>
 
+      <ul>
+        { todos.map((t, i) => (
+          <li key={i}>{t}</li>
+        )) }
+      </ul>
     </>
   )
 
