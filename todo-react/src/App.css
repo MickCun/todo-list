@@ -4,7 +4,7 @@
 }
 
 .custom-container {
-  background-color: rgb(172, 203, 225);
+  background-color: #F5F7FA;
   display: flex; 
   align-items: center;
   justify-content: center;
@@ -26,4 +26,36 @@
 
 .form-input {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.my {
+  font-weight: bold;
+  color: teal;
+}
+
+.tasks {
+  font-weight: bold;
+  color: orange;
+}
+
+.list {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+ul {
+  font-size: 20px;
+}
+
+.delete-btn  {
+  float: right;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
 }

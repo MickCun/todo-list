@@ -28,25 +28,33 @@ function App() {
     setTask("")
   }
 
+  const removeTodo = (id) => {
+    setTodos(prev => prev.filter((_, i) => i !== id))
+    console.log("Hello World " + id)
+  }
+
   return (
     <>
-      <div class="custom-container">
-        <div class="todo-container">
-          <div class="todo-header">
-            <h1>Todo List</h1>
+      <div className="custom-container">
+        <div className="todo-container">
+          <div className="todo-header">
+            <h1><span className="my">My</span> <span className="tasks">Tasks</span></h1>
+            <p>What do you need to do?</p>
           </div>
-          <div class="input-group mb-3">
-            <input value={task} onChange={(e) => setTask(e.target.value)} type="text" class="form-control" aria-describedby="button-addon2"/>
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onClick={addTodo}>Add Todo</button>
+          <div className="form-input input-group mb-3">
+            <input value={task} onChange={(e) => setTask(e.target.value)} type="text" className="form-control" aria-describedby="button-addon2"/>
+            <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={addTodo}>Add Todo</button>
           </div>
-          <ul>
+          <ul className="list">
             { todos.map((t, i) => (
-              <li key={i}>{t}</li>
+              <li key={i} className="todo-item">
+                <span>{t}</span>
+                <button className="btn btn-danger" onClick={() => removeTodo(i)}>🗑️ Delete</button>
+              </li>
             )) }
           </ul>
         </div>
       </div>
-
     </>
   )
 }
